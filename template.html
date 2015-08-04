@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<link href="css/base.css" rel="stylesheet" />
+		<link href="css/template.css" rel="stylesheet" />
+		<link href="css/test.css" rel="stylesheet" />
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link href="intention/examples/grid/css/responsivegrid.css" rel="stylesheet" />
+		<script src="intention/test/vendor/underscore.js"></script>
+	    <script src="intention/test/vendor/jquery.js"></script>
+	    <script src="intention/intention.js"></script>
+	    <script src="intention/context.js"></script>
+		
+	</head>
+
+	<body in data-in-base-class="" class="standard" data-in-tablet-class="tablet" data-in-standard-class="standard" data-in-mobile-class="mobile">
+
+		<div class="fullwide ux theme grid col10wide colum" 
+		in
+		data-in-base-class="ux theme grid colum"
+		data-in-mobile-class="col3wide" 
+		data-in-tablet-class="col6wide" 
+		data-in-standard-class="col10wide" 
+		></div>
+
+		<div class="topNav"
+		in
+		data-in-mobile-class="topNavM" 
+		data-in-tablet-class="topNavT"
+		data-in-standard-class="placeholder" >
+				
+				<ul>
+					<a href="/home.html">
+					<li>home</li>
+					</a>
+					<a href="/work.html">
+					<li>work</li>
+					</a>
+					<a href="/about.html">
+					<li>bio</li>
+					</a>
+				</ul>
+
+			</div>
+
+		<div class="sideNav"
+			in
+			data-in-mobile-class="placeholder" 
+			data-in-tablet-class="placeholder"
+			data-in-standard-class="sideNav" >
+				
+				<ul>
+					<a href="/home.html">
+					<li>home</li>
+					</a>
+					<a href="/about.html">
+					<li>bio</li>
+					</a>
+				
+					<a href="/work.html">
+					<li>work</li>
+					</a>
+				</br>
+
+
+				<div class="italics">
+					<a href="/template.html">
+					<li>Philadelphia</li>
+					</a>
+					<a href="/chase.html">
+					<li>Neutrogena</li>
+					</a>
+					<a href="/chase.html">
+					<li>K+Y</li>
+					</a>
+					<a href="/chase.html">
+					<li>J&J</li>
+					</a>
+					<a href="/chase.html">
+					<li>Classics</li>
+					</a>
+				</div>
+				</br>
+
+				</ul>
+
+			</div>
+
+			<div class="brand_container" 
+			in
+			data-in-base-class=""
+			data-in-mobile-class="col3wide" 
+			data-in-tablet-class="col6wide" 
+			data-in-standard-class="col10wide" 
+			>
+
+			<div class="brand_title"
+			in
+			data-in-mobile-class="brand_titleMM"
+			data-in-tablet-class="brand_titleT" 
+			data-in-standard-class="brand_title">Philadelphia</div>
+
+			<div class="brand_work"
+			in
+			data-in-mobile-class="placeholder"
+			data-in-tablet-class="brand_workT" 
+			data-in-standard-class="brand_work">
+
+				<div class="main">
+					<img class="imgMain" src="css/philadelphia/pcc_01.jpg" width="600" height="336">
+				</div>
+
+				<div class="subright">
+					<img class="imgA" src="css/philadelphia/pcc_02.jpg" width="180" height="auto">
+					<img class="imgB" src="css/philadelphia/pcc_03.jpg" width="180" height="auto">
+				</div>
+
+				<div class="subbottom">
+					<img class="imgC" src="css/philadelphia/pcc_04.jpg" width="185" height="auto">
+					<img class="imgD" src="css/philadelphia/pcc_05.jpg" width="185" height="auto">
+					<img class="imgE" src="css/philadelphia/pcc_06.jpg" width="185" height="auto">
+				</div>			
+
+
+			</div>
+
+			<div class="brand_workM"
+			in
+			data-in-mobile-class="brand_workM"
+			data-in-tablet-class="placeholder" 
+			data-in-standard-class="placeholder">
+				
+			<img src="css/philadelphia/pcc_01.jpg" width="600" height="336">
+			<img src="css/philadelphia/pcc_02.jpg" width="600" height="336">
+			<img src="css/philadelphia/pcc_03.jpg" width="600" height="336">
+			<img src="css/philadelphia/pcc_04.jpg" width="600" height="780">
+			<img src="css/philadelphia/pcc_05.jpg" width="600" height="780">
+			<img src="css/philadelphia/pcc_06.jpg" width="600" height="780">
+
+			</div>
+
+<script type="text/javascript">
+	
+var state = 0;	
+
+// function slide () {
+
+$(".imgA").click(function(){
+  state = "A";
+  console.log(state);
+  $('.main').empty();
+  $('.main').prepend('<img class="imgA" src="css/philadelphia/pcc_02.jpg" width="600" height="336">')
+});
+
+$(".imgB").click(function(){
+  state = "B";
+  console.log(state);
+  $('.main').empty();
+  $('.main').prepend('<img class="imgB" src="css/philadelphia/pcc_03.jpg" width="600" height="336">')
+});
+
+$(".imgC").click(function(){
+  state = "C";
+  console.log(state);
+  $('.main').empty();
+  $('.main').prepend('<img class="imgC" src="css/philadelphia/pcc_04.jpg" width="600" height="auto">')
+});
+
+$(".imgD").click(function(){
+  state = "D";
+  $('.main').empty();
+  $('.main').prepend('<img class="imgD" src="css/philadelphia/pcc_05.jpg" width="600" height="auto">')
+});
+
+$(".imgE").click(function(){
+  state = "E";
+  $('.main').empty();
+  $('.main').prepend('<img class="imgE" src="css/philadelphia/pcc_06.jpg" width="600" height="auto">')
+});
+
+$(".brand_title").click(function(){
+  state = "E";
+  $('.main').empty();
+  $('.main').prepend('<img class="imgMain" src="css/philadelphia/pcc_01.jpg" width="600" height="336">')
+});
+
+//}
+
+
+
+
+</script>
+
+
+	</body>

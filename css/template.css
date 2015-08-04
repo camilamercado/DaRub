@@ -1,0 +1,92 @@
+body {
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	font-family: "andale mono";
+}
+
+.nav {
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	top: 0px;
+	left: 0px;
+	background-color: lightgrey;
+}
+
+.nav ul {
+	list-style-type: none;
+}
+
+.nav ul li:hover {
+	color: tomato;
+}
+
+.container{
+	position: absolute;
+	width: 100%;
+	height: 1000px;
+	top: 50px;
+	left: 0px;
+	background-color: whitesmoke;
+	border-top: 1px solid white;
+}
+
+.cumpass {
+	width: 20px;
+	height: 20px;
+	font-family: "andale mono";
+	font-size: 30px;
+	background-color: tomato;
+	border-radius: 50%;
+	position: relative;
+	left: 50%;
+	margin-left: -10px;
+	top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.up {
+	width: 2px;
+	height: 20px;
+	background-color: black;
+	position: absolute;
+	left: 9px;
+}
+.across {
+	width: 20px;
+	height: 2px;
+	background-color: black;
+	position: absolute;
+	top: 9px;
+}
+
+.element {
+	background-color: white;
+	box-shadow: 3px 3px 3px 3px lightgrey;
+
+}
+
+[draggable=true] {
+    cursor: move;
+}
+
+#one {
+	width: 500px;
+	height: 300px;
+	position: absolute;
+	
+	top: 50px;
+	left: 100px;
+}
+
+#two {
+	position: absolute;
+	width: 400px;
+	height: 500px;
+
+	top: 300px;
+	left: 500px;
+}
