@@ -1,0 +1,103 @@
+.element {
+	background-color: none;
+	box-shadow: none;
+	padding-top: 10px;
+	padding: 40px;
+	color: transparent;
+	cursor: move;
+	position: absolute;	
+}
+
+.element_reveal {
+	background-color: white;
+	box-shadow: 3px 3px 3px 3px lightgrey;
+	padding-top: 10px;
+	padding: 40px;
+	color: black;
+	font-size: 14px; 
+	line-height: 18px;
+	z-index: 9;
+}
+
+
+.element > * {
+	width: 0px;
+	height: 0px;
+}
+
+.element_reveal > h1 {
+	width: 100%;
+
+}
+
+.element h1 {
+	font-size: 16px;
+	padding: 0px;
+	margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+.element#one,
+.element#one > img,
+.element_reveal#one > .text {
+	width: 300px;
+	height: 300px;
+	top: 50px;
+	left: 100px;
+	overflow: scroll!important;
+}
+
+/*.element_reveal#one {
+	width: auto;
+	height: auto;
+}*/
+
+.element#two,
+.element#two > img,
+.element_reveal#two > .text {
+	width: 200px; 
+	height: 360px;
+	top: 300px;
+	left: 600px;
+	overflow: scroll!important;
+}
+
+/*.element_reveal#two {
+	width: auto;
+	height: auto;
+}*/
+
+.element#three,
+.element#three > img,
+.element#three > .text {
+	width: 600px; 
+	height: 200px;
+	top: 50px;
+	left: 600px;
+	overflow: scroll!important;
+}
+
+/*.element_reveal#three {
+	width: auto;
+	height: auto;
+}*/
+
+.element_reveal#one,
+.element_reveal#two,
+.element_reveal#three {
+	width: auto;
+	height: auto;
+}
+
+
+/*.element#three > img {
+	width: 600px!important; 
+	height: 200px!important;
+}
+
+.element_reveal#three > *{
+	width: 600px!important; 
+	height: 200px!important;
+
+}*/
+

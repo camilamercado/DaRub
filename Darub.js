@@ -1,6 +1,20 @@
+
+var targets = $('.element')
+var width = $('img').offsetWidth;
+
+console.log(targets);
+var targetImg= targets.children('img');
+console.log(targetImg);
+
+var imgWidth =targetImg[0].naturalWidth;
+console.log(imgWidth);
+
+
+// draggable elements
+
 $(function() {
 		  $( ".element" ).draggable();
-		    containment: "body"
+		    // containment: "body"
 		  });
 
 		$(function() {                       
@@ -8,6 +22,8 @@ $(function() {
 		    $(this).toggleClass("element_reveal");     
 		  });
 		});
+
+// Div orientation
 
 		var $divs = $('#one, #two')
 		var midX = $('#cumpass').offset().left;

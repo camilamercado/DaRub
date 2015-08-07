@@ -1,0 +1,30 @@
+
+.north img {
+	float: top;
+	margin-bottom: 20px;
+	margin-right: 20px;
+}
+
+.east img {
+	float: left;
+	margin-right: 20px;
+}
+
+.west h1,
+.west .text{
+	text-align: right;
+}
+
+.west img {
+	float: right;
+	margin-left: 20px;
+}
+
+.south img {
+	
+}
+
+.south .text {
+	float:left;
+}
+
