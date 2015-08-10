@@ -17,6 +17,7 @@
 	font-size: 14px; 
 	line-height: 18px;
 	z-index: 9;
+	/*position: relative;*/
 }
 
 
@@ -50,6 +51,7 @@
 .element#two,
 .element#two > img,
 .element_reveal#two > .text {
+
 	width: 200px; 
 	height: 360px;
 	top: 300px;
@@ -63,6 +65,7 @@
 	height: 200px;
 	top: 50px;
 	left: 600px;
+
 }
 
 .element_reveal#one,
@@ -70,6 +73,7 @@
 .element_reveal#three {
 	width: auto;
 	height: auto;
+
 }
 
 .element_reveal#one > .text,

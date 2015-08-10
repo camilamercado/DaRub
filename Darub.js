@@ -56,16 +56,25 @@ $(function() {
 			    drag: function () {
 			        var cumpass = $(this), y = $(this).offset().top;
 			        console.log(y);
+			        var img = $(this).children(img);
+					 console.log(img);
+					 var text = $(this).children(".text");
+					 var h1 = $(this).children(h1);
+					 console.log(img);
 
 
 			        if(y < midY){
 			        	$(this).addClass("north"); 
 			        	$(this).removeClass("south"); 
+			        	$(img).insertBefore(text);
 			        }
 
 			        if(y > midY){
 			        	$(this).addClass("south"); 
-			        	$(this).removeClass("north"); 
+			        	$(this).removeClass("north");
+			        	$(img).insertAfter(text);
+			        	
+
 			        }
 
 			    }

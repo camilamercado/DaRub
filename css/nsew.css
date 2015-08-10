@@ -20,11 +20,6 @@
 	margin-left: 20px;
 }
 
-.south img {
-	
+.south h1 {
+	float: left;
 }
-
-.south .text {
-	float:left;
-}
-
