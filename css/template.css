@@ -10,7 +10,7 @@ body {
 	top: 0px;
 	left: 0px;
 	font-family: "andale mono";
-	overflow: hidden;
+	overflow: auto;
 }
 
 .container{

@@ -1,20 +1,7 @@
 
-// var targets = $('.element')
-// var width = $('img').offsetWidth;
-
-// console.log(targets);
-// var targetImg= targets.children('img');
-// console.log(targetImg);
-
-// var imgWidth =targetImg[0].naturalWidth;
-// console.log(imgWidth);
-
-
-// draggable elements
-
 $(function() {
 		  $( ".element" ).draggable();
-		    // containment: "body"
+		    containment: "body"
 		  });
 
 		$(function() {                       
@@ -25,65 +12,51 @@ $(function() {
 
 // Div orientation
 
-		var $divs = $('#one, #two')
-		var midX = $('#cumpass').offset().left;
+var $divs = $('#one, #two')
+var midX = $('#cumpass').offset().left;
 
+$divs.draggable({
+    drag: function () {
+        var cumpass = $(this), x = $(this).offset().left;
+       	var img = $(this).children(img), imgX = img[1].offsetWidth, theX = x + imgX;
+		console.log(imgX,"+",midX,"=",theX);
 	
-		 console.log(midX);
-			
-			$divs.draggable({
-			    drag: function () {
-			        var cumpass = $(this), x = $(this).offset().left;
-			        // var width = $(this);
-			        // var widthX = width[0].offsetWidth;
-			        // var newX = x - widthX;
 
+        if(theX > midX){
+			$(this).addClass("west"); 
+        	$(this).removeClass("east");  
+        	//document.querySelector(".element_reveal").style.marginLeft = "-200px";	
+        }
 
-					var img = $(this).children(img), imgX = img[1].offsetWidth, theX = x + imgX;
-					console.log(imgX,"+",midX,"=",theX);
+        if(theX < midX){
+        	$(this).addClass("east"); 
+        	$(this).removeClass("west"); 
+        }
 
+    }
+});
 
-			        if(theX > midX){
+var $divs = $('#three')
+var midY = $('#cumpass').offset().top;
 
-			   			console.log("!");
-			        	$(this).addClass("west"); 
-			        	$(this).removeClass("east"); 
-			        }
+$divs.draggable({
+    drag: function () {
+        var cumpass = $(this), y = $(this).offset().top; 
+        var img = $(this).children(img);		 
+	    var text = $(this).children(".text");
+	    var h1 = $(this).children(h1);
+		 
+        if(y < midY){
+        	$(this).addClass("north"); 
+        	$(this).removeClass("south"); 
+        	$(img).insertBefore(text);
+        }
 
-			        if(theX < midX){
-			        	$(this).addClass("east"); 
-			        	$(this).removeClass("west"); 
-			        }
+        if(y > midY){
+        	$(this).addClass("south"); 
+        	$(this).removeClass("north");
+        	$(img).insertAfter(text);
+        }
 
-			    }
-			});
-
-			var $divs = $('#three')
-			var midY = $('#cumpass').offset().top;
-			 console.log(midY);
-			
-			$divs.draggable({
-			    drag: function () {
-			        var cumpass = $(this), y = $(this).offset().top; 
-			        var img = $(this).children(img);		 
-				    var text = $(this).children(".text");
-				    var h1 = $(this).children(h1);
-					 
-
-
-			        if(y < midY){
-			        	$(this).addClass("north"); 
-			        	$(this).removeClass("south"); 
-			        	$(img).insertBefore(text);
-			        }
-
-			        if(y > midY){
-			        	$(this).addClass("south"); 
-			        	$(this).removeClass("north");
-			        	$(img).insertAfter(text);
-			        	
-
-			        }
-
-			    }
-			});
+    }
+});

@@ -1,3 +1,7 @@
+.element_reveal#three.south {
+	margin-top:0px!important;
+}
+
 
 .north img {
 	float: top;
@@ -5,9 +9,22 @@
 	margin-right: 20px;
 }
 
+.element_reveal.west {
+	margin-left:0px!important;
+}
+
 .east img {
 	float: left;
 	margin-right: 20px;
+}
+
+.element_reveal#one.west {
+	margin-left:-320px!important;
+}
+
+
+.element_reveal#two.west {
+	margin-left:-220px!important;
 }
 
 .west h1,
@@ -20,6 +37,15 @@
 	margin-left: 20px;
 }
 
+.element_reveal#three.south {
+	margin-top:-220px!important;
+}
+
+.element_reveal.south {
+	padding-top: 60px;
+}
+
 .south h1 {
-	float: left;
+	position: absolute;
+	top: 40px;
 }
