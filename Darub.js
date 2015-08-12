@@ -27,20 +27,30 @@ $(function() {
 
 		var $divs = $('#one, #two')
 		var midX = $('#cumpass').offset().left;
+
 	
 		 console.log(midX);
 			
 			$divs.draggable({
 			    drag: function () {
 			        var cumpass = $(this), x = $(this).offset().left;
-			        console.log(x);
+			        // var width = $(this);
+			        // var widthX = width[0].offsetWidth;
+			        // var newX = x - widthX;
 
-			        if(x > midX){
+
+					var img = $(this).children(img), imgX = img[1].offsetWidth, theX = x + imgX;
+					console.log(imgX,"+",midX,"=",theX);
+
+
+			        if(theX > midX){
+
+			   			console.log("!");
 			        	$(this).addClass("west"); 
 			        	$(this).removeClass("east"); 
 			        }
 
-			        if(x < midX){
+			        if(theX < midX){
 			        	$(this).addClass("east"); 
 			        	$(this).removeClass("west"); 
 			        }
@@ -54,13 +64,11 @@ $(function() {
 			
 			$divs.draggable({
 			    drag: function () {
-			        var cumpass = $(this), y = $(this).offset().top;
-			        console.log(y);
-			        var img = $(this).children(img);
-					 console.log(img);
-					 var text = $(this).children(".text");
-					 var h1 = $(this).children(h1);
-					 console.log(img);
+			        var cumpass = $(this), y = $(this).offset().top; 
+			        var img = $(this).children(img);		 
+				    var text = $(this).children(".text");
+				    var h1 = $(this).children(h1);
+					 
 
 
 			        if(y < midY){
