@@ -1,14 +1,23 @@
 
-$(function() {
-		  $( ".element" ).draggable();
-		    containment: "body"
-		  });
-
-		$(function() {                       
-		  $(".element").click(function() {  
-		    $(this).toggleClass("element_reveal");     
-		  });
-		});
+$(function(){
+    $(".element").click(function() {  
+        var iteration=$(this).data('iteration')||1
+        switch ( iteration) {
+            case 1:
+                 $(this).addClass("element_reveal"); 
+                 $(this).draggable({ disabled: true });
+                break;
+            
+            case 2:
+                 $(this).removeClass("element_reveal");
+                  $(this).draggable("enable");
+                break;
+        }
+        iteration++;
+        if (iteration>2) iteration=1
+        $(this).data('iteration',iteration)
+    })
+})
 
 // Div orientation
 
