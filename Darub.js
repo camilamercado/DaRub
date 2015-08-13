@@ -1,4 +1,3 @@
-
 $(function(){
     $(".element").click(function() {  
         var iteration=$(this).data('iteration')||1
@@ -6,11 +5,22 @@ $(function(){
             case 1:
                  $(this).addClass("element_reveal"); 
                  $(this).draggable({ disabled: true });
+
+                 var div = $(this), divX = (div[0].offsetWidth) - 80;
+                 var img = $(this).children(img), imgX = img[1].offsetWidth;
+                 console.log(divX, imgX);
+                
+                 //$(this).css( "width", divX );
+
+                 // $(this).css( "margin-left", imgX ); 
+                 // $(this).find(".west").css("margin-left", "200px");
+                
                 break;
             
             case 2:
                  $(this).removeClass("element_reveal");
-                  $(this).draggable("enable");
+                 $(this).draggable("enable");
+                 //$(this).css( "width", "auto" );
                 break;
         }
         iteration++;
@@ -18,23 +28,21 @@ $(function(){
         $(this).data('iteration',iteration)
     })
 })
-
 // Div orientation
 
-var $divs = $('#one, #two')
+var $divs = $('#one, #two, #four' )
 var midX = $('#cumpass').offset().left;
 
 $divs.draggable({
     drag: function () {
         var cumpass = $(this), x = $(this).offset().left;
-       	var img = $(this).children(img), imgX = img[1].offsetWidth, theX = x + imgX;
-		console.log(imgX,"+",midX,"=",theX);
-	
+       	var img = $(this).children(img), imgX = img[1].offsetWidth, imgMargin = 0 - imgX; theX = x + imgX;
+		console.log(imgX,"+",midX,"=",theX, imgMargin);	
 
         if(theX > midX){
 			$(this).addClass("west"); 
         	$(this).removeClass("east");  
-        	//document.querySelector(".element_reveal").style.marginLeft = "-200px";	
+        
         }
 
         if(theX < midX){
@@ -69,3 +77,4 @@ $divs.draggable({
 
     }
 });
+

@@ -44,8 +44,7 @@
 .element_reveal#one > .text {
 	width: 300px;
 	height: 300px;
-	top: 50px;
-	left: 100px;
+	left: 34px; top: 249px;
 	
 }
 
@@ -55,8 +54,7 @@
 
 	width: 200px; 
 	height: 360px;
-	top: 300px;
-	left: 600px;
+	left: 343px; top: 113px;
 }
 
 .element#three,
@@ -64,15 +62,24 @@
 .element_reveal#three > .text {
 	width: 600px; 
 	height: 200px;
-	top: 50px;
-	left: 600px;
+	left: 212px; top: 40px;
+
+}
+
+.element#four,
+.element#four > img,
+.element_reveal#four > .text {
+	width: 200px; 
+	height: 200px;
+	left: 823px; top: 40px;
 
 }
 
 
 .element_reveal#one,
 .element_reveal#two,
-.element_reveal#three {
+.element_reveal#three,
+ .element_reveal#four{
 	width: auto;
 	height: auto;
 
@@ -80,7 +87,8 @@
 
 .element_reveal#one > .text,
 .element_reveal#two > .text,
-.element_reveal#three > .text {
+.element_reveal#three > .text,
+.element_reveal#four > .text  {
 	overflow: scroll!important;
 }
 

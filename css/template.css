@@ -1,26 +1,28 @@
 html {
 	height: 100%;
-	width: 100%;
 }
 
 body {
-	width: 100%;
-	max-width: 100%;
 	height: 100%;
 	top: 0px;
 	left: 0px;
 	font-family: "andale mono";
-	overflow: auto;
+	overflow: hidden;
 }
 
 .container{
 	position: absolute;
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	top: 0px;
 	left: 0px;
 	background-color: whitesmoke;
 	border-top: 1px solid white;
+}
+
+.container h2 {
+	font-size: 18px;
+	margin-left: 20px;
 }
 
 #cumpass {
