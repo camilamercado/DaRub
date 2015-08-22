@@ -1,14 +1,26 @@
 
 $(function() {
 		  $( ".element" ).draggable();
+		  
 		    containment: "body"
 		  });
 
 		$(function() {                       
 		  $(".element").click(function() {  
-		    $(this).toggleClass("element_reveal");     
+		    $(this).toggleClass("element_reveal");
+		   $( ".element_reveal" ).draggable( "option", "addClasses", false );
+
 		  });
 		});
+
+
+		// var state = true;
+
+		// $(".element").on('click', function() {
+		//      $(this).addClass( "element_reveal", state ? this.value : 'normal' );
+		//     state = !state;
+		// });
+
 
 // Div orientation
 
@@ -25,7 +37,7 @@ $divs.draggable({
         if(theX > midX){
 			$(this).addClass("west"); 
         	$(this).removeClass("east");  
-        	//document.querySelector(".element_reveal").style.marginLeft = "-200px";	
+
         }
 
         if(theX < midX){
