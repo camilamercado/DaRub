@@ -1,3 +1,6 @@
+/***********************************************************/
+/*DO NOT ATLER*/
+
 html {
 	height: 100%;
 }
@@ -23,6 +26,8 @@ html {
 	}
 }
 
+/***********************************************************/
+
 .container{
 	position: absolute;
 	width: 100%;
@@ -34,6 +39,7 @@ html {
 }
 
 .container h2 {
+	display: none;
 	font-size: 18px;
 	margin-left: 20px;
 }
@@ -43,7 +49,7 @@ html {
 	height: 20px;
 	font-family: "andale mono";
 	font-size: 30px;
-	background-color: tomato;
+	background-color: transparent;
 	border-radius: 50%;
 	position: relative;
 	left: 50%;
@@ -56,14 +62,14 @@ html {
 .up {
 	width: 2px;
 	height: 20px;
-	background-color: black;
+	background-color: transparent;
 	position: absolute;
 	left: 9px;
 }
 .across {
 	width: 20px;
 	height: 2px;
-	background-color: black;
+	background-color: transparent;
 	position: absolute;
 	top: 9px;
 }
