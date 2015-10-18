@@ -1,14 +1,32 @@
+/***********************************************************/
+/*DO NOT ATLER*/
+
 html {
 	height: 100%;
 }
 
-body {
-	height: 100%;
-	top: 0px;
-	left: 0px;
-	font-family: "andale mono";
-	overflow: hidden;
+@media only screen and (min-width: 1500px) {
+    body {
+        top: 0px;
+		left: 0px;
+		overflow: hidden;
+        -moz-transform: scale(1.3, 1.3); /* Moz-browsers */
+	    zoom: 1.3; /* Other non-webkit browsers */
+	    zoom: 130%; /* Webkit browsers */
+    }
 }
+
+@media only screen and (min-width: 310px) and (max-width: 1200px){
+	body {
+		height: 100%;
+		top: 0px;
+		left: 0px;
+		overflow: hidden;
+		background: white;
+	}
+}
+
+/***********************************************************/
 
 .container{
 	position: absolute;
@@ -16,11 +34,12 @@ body {
 	height: 100vh;
 	top: 0px;
 	left: 0px;
-	background-color: white;
+	font-family: "andale mono";
 	border-top: 1px solid white;
 }
 
 .container h2 {
+	display: none;
 	font-size: 18px;
 	margin-left: 20px;
 }
@@ -30,7 +49,7 @@ body {
 	height: 20px;
 	font-family: "andale mono";
 	font-size: 30px;
-	background-color: tomato;
+	background-color: transparent;
 	border-radius: 50%;
 	position: relative;
 	left: 50%;
@@ -43,14 +62,14 @@ body {
 .up {
 	width: 2px;
 	height: 20px;
-	background-color: black;
+	background-color: transparent;
 	position: absolute;
 	left: 9px;
 }
 .across {
 	width: 20px;
 	height: 2px;
-	background-color: black;
+	background-color: transparent;
 	position: absolute;
 	top: 9px;
 }

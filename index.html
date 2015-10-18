@@ -2,9 +2,14 @@
 <html lang="en">
 	<head>
 
-		<!-- this is the "head" of the document where the browser gets its information on the different file dependancies in use. The first link points to the css file which provieds the design characteristics of the document, while the HTML file provides structure, the CSS provides layout.  -->
+		<!-- this is the "head" of the document where the browser gets its information 
+			 on the different file dependencies in use. 
+			 The first four links point to the CSS files which provide the design 
+			 characteristics of the document. 
+			 While the HTML file provides structure, the CSS provides layout.  -->
 		
 		<link href="css/template.css" rel="stylesheet" />
+		<link href="css/mobile.css" rel="stylesheet" />
 		<link href="css/nsew.css" rel="stylesheet" />
 		<link href="css/reveal.css" rel="stylesheet" />
 		<meta charset="utf-8" />
@@ -18,9 +23,11 @@
 
 	<body>
 
-	<!-- this is the "body" of the document where all of the structure is layed out  -->
+	<!-- this is the "body" of the document where all of the structure is laid out  -->
 
-		<!-- within the tags, it is possible to assign further specif identification through the use of a "class" or an "ID", these are values that can be assigned to the tags to call upon within the CSS or Javascript -->
+		<!-- within the tags, it is possible to assign further specif identification 
+		through the use of a "class" or an "ID", these are values that can be assigned 
+		to the tags to call upon within the CSS or JavaScript -->
 
 		<div class="container">
 
@@ -30,6 +37,15 @@
 				<div class="up"></div>
 				<div class="across"></div>
 			</div>
+
+			<!--  New modules can be copied and pasted from these examples. 
+				  They need to be assigned either a class of either 
+				  element east, west, north or south, 
+				  depending on where on the page they will be positioned. 
+				  The <img> tags contain the width and height of the image, 
+				  as well as a "path" to its location in respect to this HTML file. 
+			      In this case each image is located within a file path as follows 
+			      CSS -> IMG -> EXAMPLE.JPG  -->
 			
 			<div class="element north" id="three" draggable="true">
 				<h1>Entry #3</h1>
