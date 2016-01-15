@@ -3,6 +3,13 @@
 
 html {
 	height: 100%;
+	margin: 0px;
+}
+
+body {
+	height: 100vh;
+	margin: 0px;
+	/*//position: fixed;*/
 }
 
 @media only screen and (min-width: 1500px) {
@@ -77,3 +84,13 @@ html {
 [draggable=true] {
     cursor: move;
 }
+
+iframe {
+	display: none;
+}
+
+.videoSlide {
+	display: block;
+}
+
+
