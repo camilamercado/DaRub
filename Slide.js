@@ -51,36 +51,12 @@ var pages = [
 
          counter = (counter + 1) % brute.length; 
          $(this).attr('src',brute[counter].image);
-         console.log(brute[counter].image);
+        // console.log(brute[counter].image);
        
       }
     }
   });
 
-// $('.video').click(function () {
-//   $('iframe').show();
-//   $('.videoSlide').hide();
-
-// });
-
-    // $(".video").click(function() {  
-    //  // console.log("x");
-    //     var iteration=$(this).data('iteration')||1
-    //     switch ( iteration) {
-    //         case 1:
-    //         console.log("x");
-    //             $('iframe').show();
-    //             $('.videoSlide').hide();
-    //         break;  
-    //         case 2:
-    //             $('.videoSlide').show();
-    //             $('iframe').hide();
-    //         break;
-    //     }
-    //     iteration++;
-    //     if (iteration>2) iteration=1
-    //     $(this).data('iteration',iteration)
-    // })
 
 
 

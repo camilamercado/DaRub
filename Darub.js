@@ -13,18 +13,20 @@ $(function(){
         switch ( iteration) {
             case 1:
                  $(this).addClass("element_reveal"); 
-                // $(this).draggable({ disabled: true });
+                 $(this).draggable({ disabled: true });
 
                  var div = $(this), divX = (div[0].offsetWidth) - 80;
-                 var img = $(this).children(img), imgML = -(img[1].offsetWidth + 20), imgMT = -(img[2].offsetHeight + 20);
-
+                 var img = $(this).children(img),
+                 imgML = -(img[1].offsetWidth + 20), 
+                 imgMT = -(img[2].offsetHeight + 20);
+        
                  if ($(this).hasClass('west')) {
                      $(this).css('margin-left', imgML); 
-                      //console.log(imgML);
+                      
                  }
                  if ($(this).hasClass('south')) {
                      $(this).css('margin-top', imgMT); 
-                     //console.log(imgMT);
+                     
                  }
                  $(this).find('iframe').show();
                  $(this).find('.videoSlide').hide();
@@ -34,11 +36,17 @@ $(function(){
                  if (state==="lock") {
                     //no action
                  } else {
+                 
                  $(this).removeClass("element_reveal");
                  $(this).find('iframe').hide();
                  $(this).find('.videoSlide').show();
-                 $(this).css('margin-left', '0px');
-                 $(this).css('margin-top', '0px');
+                 
+                 if ($(this).hasClass('west')) {
+                    var imageW = $(this).find("img").width();
+                    $(this).css('margin-left', imageW);
+                 
+                 }
+                 
                  
                  }
             break;
@@ -53,7 +61,7 @@ $(function(){
 // ADD THE NAME OF NEW ELEMENTS HERE IF THEY HAVE AN 
 // INITIAL DIRECETION CLASS OF EAST OR WEST
 
-var $divs = $('#one, #two, #four' )
+var $divs = $('.east' , '.west' )
 
 //DO NOT ALTER CONTENT BELOW
 
@@ -82,7 +90,7 @@ $divs.draggable({
 // ADD THE NAME OF NEW ELEMENTS HERE IF THEY HAVE AN 
 // INITIAL DIRECETION CLASS OF NORTH OR SOUTH
 
-var $divs = $('#three', '#five')
+var $divs = $('.north', '.south')
 
 //DO NOT ALTER CONTENT BELOW
 

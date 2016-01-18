@@ -9,7 +9,6 @@
 	padding-top: 10px;
 	padding: 40px;
 	color: transparent;
-	cursor: move;
 	position: absolute;	
 }
 
@@ -56,8 +55,7 @@ COPY FORMAT AND APPLY RELEVANT WIDTH, HEIGHT
 AND POSITION INFORMATION*/
 
 .element#one,
-.element#one > img,
-.element_reveal#one > .text {
+.element#one > img {
 	width: 300px;
 	height: 300px;
 	left: 34px; top: 249px;
@@ -65,17 +63,14 @@ AND POSITION INFORMATION*/
 }
 
 .element#two,
-.element#two > img,
-.element_reveal#two > .text {
-
+.element#two > img {
 	width: 200px; 
 	height: 360px;
 	left: 343px; top: 113px;
 }
 
 .element#three,
-.element#three > img,
-.element_reveal#three > .text {
+.element#three > img {
 	width: 600px; 
 	height: 200px;
 	left: 212px; top: 40px;
@@ -83,11 +78,18 @@ AND POSITION INFORMATION*/
 }
 
 .element#four,
-.element#four > img,
-.element_reveal#four > .text {
+.element#four > img {
 	width: 200px; 
 	height: 200px;
 	left: 823px; top: 40px;
+
+}
+
+.element#six,
+.element#six > img {
+	width: 100px; 
+	height: 500px;
+	left: 423px; top: 20px;
 
 }
 
@@ -107,38 +109,54 @@ AGAINST SHIFTS IN DIFFERENT BROWSERS,
 THE COMPUTED SIZE OF EACH MODULE CAN BE FOUND 
 USING THE INSPECT ELEMENT TOOL IN THE BROWSER*/
 
+/*.element_reveal#one > .text {
+	width: 300px;
+	height: 300px;
+	
+}*/
 
-.element_reveal#one {
+/*.element_reveal#two > .text {
+	width: 200px; 
+	height: 360px;
+}*/
+/*#three > .text {
+	width: 600px; 
+	height: 200px;
+}*/
+
+/*.element_reveal#four > .text {
+	width: 200px; 
+	height: 200px;
+}*/
+
+/*.element_reveal#one {
  	width:620px!important;
 	height:320px!important;
-}
+}*/
 
-.element_reveal#two {
+/*.element_reveal#two {
  	width:420px!important;
 	height:380px!important;
-}
+}*/
 
 
-.element_reveal#three{
+/*.element_reveal#three{
 	width:620px!important;
 	height:444px!important;
-}
+}*/
 
-.element_reveal#four{
+/*.element_reveal#four{
 	width:420px!important;
 	height:220px!important;
-}
+}*/
 
-.element_reveal#five{
+/*.element_reveal#five{
 	width:520px!important;
 	height:600px!important;
-}
+}*/
 
-.element_reveal#one > .text,
-.element_reveal#two > .text,
-.element_reveal#three > .text,
-.element_reveal#four > .text,
-.element_reveal#five > .text  {
+
+.element_reveal > .text  {
 	overflow: scroll!important;
 }
 

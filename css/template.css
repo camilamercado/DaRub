@@ -81,9 +81,9 @@ body {
 	top: 9px;
 }
 
-[draggable=true] {
+/*[draggable=true] {
     cursor: move;
-}
+}*/
 
 iframe {
 	display: none;
