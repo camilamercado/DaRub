@@ -105,7 +105,8 @@
 	.element_reveal#one,
 	.element_reveal#two,
 	.element_reveal#three,
-	.element_reveal#four{
+	.element_reveal#four,
+	.element_reveal#five{
 		width: 78%;
 		height: 80%;
 		position: absolute;
@@ -115,7 +116,7 @@
 	}
 
 	.element_reveal > img {
-		display: none;
+		/*display: none;*/
 	}
 	
 	.element_reveal > .text{
